@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fully hardened AWS AMIs with CIS Level 1/2 and DISA STIG remediation applied via ansible-lockdown — built on the StigReady minimal base. auditd, AIDE, and the controls auditors check, still cloud-usable.">
+    <meta name="keywords" content="STIG applied AMI, CIS hardened AMI, DISA STIG, ansible-lockdown, CIS Level 2, Ubuntu 24.04, FedRAMP, DoD, hardened image, auditd, AIDE">
+    <meta name="author" content="StigApplied">
+    <title>StigApplied — CIS &amp; DISA STIG Hardened AMIs on AWS Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .accent { color: #DC2626; }
+        .bg-navy { background-color: #0C2340; }
+        .bg-navy-light { background-color: #1B3A6B; }
+        .border-accent { border-color: #DC2626; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+    <!-- Cross-sell banner -->
+    <div class="bg-navy-light text-center text-sm py-2 px-4 text-gray-200">
+        Just need the hardened <strong>base</strong> to apply your own profiles?
+        <a href="https://stigready.com" class="underline hover:text-white font-semibold">Try StigReady →</a>
+    </div>
+
+    <!-- Nav -->
+    <nav class="bg-navy border-b border-gray-800 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo.png" alt="StigApplied" class="h-10 w-auto"/>
+                <span class="text-xl font-black tracking-wide"><span class="text-white">STIG</span><span class="accent">APPLIED</span></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+                <a href="#compliance" class="text-gray-300 hover:text-white transition">Compliance</a>
+                <a href="#profiles" class="text-gray-300 hover:text-white transition">Profiles</a>
+                <a href="#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                <a href="https://aws.amazon.com/marketplace/seller-profile?id=stigready" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-md font-semibold transition">AWS Marketplace</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-navy py-24 px-4 text-center border-b border-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <img src="assets/logo.png" alt="StigApplied" class="h-28 w-auto mx-auto mb-8"/>
+            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                <span class="text-white">CIS &amp; DISA STIG</span><br/>
+                <span class="accent">Hardened AMIs</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
+                The StigReady minimal base with full <strong>CIS Level 1/2</strong> and
+                <strong>DISA STIG</strong> remediation applied via ansible-lockdown — auditd, AIDE,
+                and the controls auditors actually check.
+            </p>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">
+                Remediation is applied, not just aligned — and tuned so the image still boots,
+                accepts your EC2 key pair, and registers with SSM out of the box.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://aws.amazon.com/marketplace/seller-profile?id=stigready"
+                   class="bg-red-600 hover:bg-red-500 text-white px-8 py-3 rounded-md font-bold text-lg transition">
+                    Browse on AWS Marketplace
+                </a>
+                <a href="https://github.com/stigready/stigready"
+                   class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-md font-bold text-lg transition flex items-center justify-center gap-2">
+                    <i data-lucide="github" class="w-5 h-5"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-white">What You Get</h2>
+            <p class="text-center text-gray-400 mb-12">Every StigApplied AMI ships with the benchmark remediation already applied.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
+                    <i data-lucide="shield-check" class="w-10 h-10 mb-4 text-red-500"></i>
+                    <h3 class="text-lg font-bold mb-2">Remediation Applied</h3>
+                    <p class="text-gray-400 text-sm">Full CIS Level 1/2 or DISA STIG remediation applied with the upstream <code class="text-red-400">ansible-lockdown</code> roles — not a checklist, the actual fixes.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
+                    <i data-lucide="scan-line" class="w-10 h-10 mb-4 text-red-500"></i>
+                    <h3 class="text-lg font-bold mb-2">Audit &amp; Integrity</h3>
+                    <p class="text-gray-400 text-sm">auditd running with the benchmark rule set, and AIDE installed for file-integrity monitoring — ready for your SIEM.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
+                    <i data-lucide="cloud-cog" class="w-10 h-10 mb-4 text-red-500"></i>
+                    <h3 class="text-lg font-bold mb-2">Still Cloud-Usable</h3>
+                    <p class="text-gray-400 text-sm">Hardening is tuned for EC2: the instance still boots unattended, cloud-init injects your key pair, and SSM (443) keeps working.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
+                    <i data-lucide="layers" class="w-10 h-10 mb-4 text-red-500"></i>
+                    <h3 class="text-lg font-bold mb-2">On the StigReady Base</h3>
+                    <p class="text-gray-400 text-sm">Built on the same STIG-aligned partition layout, minimal footprint, and monthly patch cadence as <a href="https://stigready.com" class="text-red-400 hover:underline">StigReady</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance -->
+    <section id="compliance" class="py-20 px-4 bg-gray-800">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-white">Benchmarks Applied</h2>
+            <p class="text-center text-gray-400 mb-12">Pick the profile your auditor requires — the remediation is already in the image.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gray-900 rounded-lg p-6 border-t-4 border-red-600">
+                    <h3 class="font-bold text-lg mb-3 text-white">CIS Level 1<br/><span class="text-sm text-gray-400 font-normal">Ubuntu 24.04 Server</span></h3>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Baseline server hardening</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Low operational friction</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>UFW, PAM, sysctl controls</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6 border-t-4 border-red-600">
+                    <h3 class="font-bold text-lg mb-3 text-white">CIS Level 2<br/><span class="text-sm text-gray-400 font-normal">Ubuntu 24.04 Server</span></h3>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Everything in Level 1, plus</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Defense-in-depth restrictions</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>auditd + AIDE enabled</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6 border-t-4 border-red-600">
+                    <h3 class="font-bold text-lg mb-3 text-white">DISA STIG<br/><span class="text-sm text-gray-400 font-normal">Ubuntu 24.04 CAT I/II/III</span></h3>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>All severities remediated</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>DoD SRG / NIST 800-53 aligned</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Cloud-safe exceptions documented</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500">Independently verify with your own SCAP/InSpec scan — StigApplied images are built to pass, not to hide findings.</p>
+        </div>
+    </section>
+
+    <!-- Profiles / Products -->
+    <section id="profiles" class="py-20 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Available Profiles</h2>
+            <div class="space-y-4">
+                <div class="bg-gray-800 rounded-lg border border-gray-700 p-6 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-navy-light p-3 rounded-lg"><i data-lucide="server" class="w-6 h-6 text-red-500"></i></div>
+                        <div>
+                            <h3 class="font-bold text-white">StigApplied CIS L1 · Ubuntu 24.04</h3>
+                            <p class="text-sm text-gray-400">x86_64 · EBS · HVM · monthly</p>
+                        </div>
+                    </div>
+                    <a href="https://aws.amazon.com/marketplace/seller-profile?id=stigready" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold transition whitespace-nowrap">Marketplace</a>
+                </div>
+                <div class="bg-gray-800 rounded-lg border border-gray-700 p-6 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-navy-light p-3 rounded-lg"><i data-lucide="server" class="w-6 h-6 text-red-500"></i></div>
+                        <div>
+                            <h3 class="font-bold text-white">StigApplied CIS L2 · Ubuntu 24.04</h3>
+                            <p class="text-sm text-gray-400">x86_64 · EBS · HVM · monthly</p>
+                        </div>
+                    </div>
+                    <a href="https://aws.amazon.com/marketplace/seller-profile?id=stigready" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold transition whitespace-nowrap">Marketplace</a>
+                </div>
+                <div class="bg-gray-800 rounded-lg border border-gray-700 p-6 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-navy-light p-3 rounded-lg"><i data-lucide="server" class="w-6 h-6 text-red-500"></i></div>
+                        <div>
+                            <h3 class="font-bold text-white">StigApplied DISA STIG · Ubuntu 24.04</h3>
+                            <p class="text-sm text-gray-400">x86_64 · EBS · HVM · monthly</p>
+                        </div>
+                    </div>
+                    <a href="https://aws.amazon.com/marketplace/seller-profile?id=stigready" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold transition whitespace-nowrap">Marketplace</a>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-6">Rocky Linux 9 and more OS variants coming soon.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 px-4 bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-red-600 text-white w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center font-bold text-xl">1</div>
+                    <h3 class="text-lg font-bold mb-2">Pick a Profile</h3>
+                    <p class="text-gray-400 text-sm">Choose CIS L1, CIS L2, or DISA STIG on AWS Marketplace and launch — the remediation is already applied.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-red-600 text-white w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center font-bold text-xl">2</div>
+                    <h3 class="text-lg font-bold mb-2">Launch</h3>
+                    <p class="text-gray-400 text-sm">cloud-init injects your key pair on first boot. Connect as <code class="text-red-400">ec2-user</code>; SSM registers automatically.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-red-600 text-white w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center font-bold text-xl">3</div>
+                    <h3 class="text-lg font-bold mb-2">Prove It</h3>
+                    <p class="text-gray-400 text-sm">Run your SCAP/InSpec scan and hand the report to your auditor. Layer app-specific controls on top.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 px-4">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white">Pricing</h2>
+            <p class="text-gray-400 mb-10">Pay only the software fee on top of your normal EC2 costs.</p>
+            <div class="bg-gray-900 rounded-xl border border-red-600 p-8 mb-6">
+                <p class="text-5xl font-black text-white mb-2">$0.08<span class="text-xl font-normal text-gray-400">/hr</span></p>
+                <p class="text-gray-400">Software fee · EC2 instance costs billed separately by AWS</p>
+            </div>
+            <p class="text-sm text-gray-500">Annual contracts and Private Offers available. <a href="mailto:contact@stigapplied.com" class="text-red-500 hover:underline">Contact us</a> for volume pricing.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy py-10 px-4 mt-auto border-t border-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/logo.png" alt="StigApplied" class="h-8 w-auto"/>
+                    <span class="font-black tracking-wide"><span class="text-white">STIG</span><span class="accent">APPLIED</span></span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                    <a href="https://stigready.com" class="hover:text-white transition">StigReady (base)</a>
+                    <a href="https://github.com/stigready/stigready" class="hover:text-white transition">GitHub</a>
+                    <a href="https://aws.amazon.com/marketplace/seller-profile?id=stigready" class="hover:text-white transition">AWS Marketplace</a>
+                    <a href="mailto:contact@stigapplied.com" class="hover:text-white transition">contact@stigapplied.com</a>
+                </div>
+            </div>
+            <p class="text-center text-xs text-gray-600">&copy; 2026 StigApplied. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
