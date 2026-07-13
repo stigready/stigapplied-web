@@ -28,7 +28,7 @@ Pages republishes in ~1 minute.
 ## Structure
 
 ```
-index.html      # the site (hero, features, benchmarks, profiles, pricing)
+index.html      # the site (hero, features, catalog + scores, benchmarks, availability, pricing)
 assets/logo.*   # shared StigReady/StigApplied logo
 CNAME           # stigapplied.com
 .nojekyll       # serve as-is (no Jekyll)
