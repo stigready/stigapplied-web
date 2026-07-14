@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fully hardened AWS AMIs with CIS Level 1/2 and DISA STIG remediation applied via ansible-lockdown — across Ubuntu 24.04 and the RHEL family (Rocky Linux 9, AlmaLinux 9). Every image is scored against its raw SSG profile and gated at 90%; STIG images are FIPS 140-3 active. Built on the StigReady minimal base.">
-    <meta name="keywords" content="STIG applied AMI, CIS hardened AMI, DISA STIG, ansible-lockdown, CIS Level 2, FIPS 140-3, Ubuntu 24.04, Rocky Linux 9, AlmaLinux 9, OpenSCAP score, FedRAMP, DoD, auditd, AIDE">
+    <meta name="description" content="Fully hardened AWS AMIs with CIS Level 1/2 and DISA STIG remediation applied via ansible-lockdown — across Ubuntu 24.04 and the RHEL family: genuine Red Hat Enterprise Linux 9 &amp; 10 (BYOL) plus Rocky Linux 9 and AlmaLinux 9. Every image is scored against its raw SSG profile and gated at 90%; STIG images are FIPS 140-3 active. Built on the StigReady minimal base.">
+    <meta name="keywords" content="STIG applied AMI, CIS hardened AMI, DISA STIG, ansible-lockdown, CIS Level 2, FIPS 140-3, Red Hat Enterprise Linux 9, RHEL 10, RHEL BYOL, Ubuntu 24.04, Rocky Linux 9, AlmaLinux 9, OpenSCAP score, FedRAMP, DoD, auditd, AIDE">
     <meta name="author" content="StigApplied">
     <title>StigApplied — CIS &amp; DISA STIG Remediated AMIs, Scored &amp; Gated</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -55,7 +55,9 @@
                 The StigReady minimal base with full <strong>CIS Level 1/2</strong> and
                 <strong>DISA STIG</strong> remediation applied via ansible-lockdown — across
                 <strong class="text-white">Ubuntu 24.04</strong> and the
-                <strong class="text-white">RHEL family</strong> (Rocky Linux 9, AlmaLinux 9).
+                <strong class="text-white">RHEL family</strong>: genuine
+                <strong class="text-white">Red Hat Enterprise Linux 9 &amp; 10</strong> (BYOL),
+                plus Rocky Linux 9 and AlmaLinux 9.
             </p>
             <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
                 Every image is <strong class="text-gray-200">scored in the build</strong> against its
@@ -144,10 +146,25 @@
                             <td class="px-4 py-3 text-center font-mono">93.7%</td>
                             <td class="px-4 py-3 text-center font-mono accent">93.8%</td>
                         </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-semibold text-white">Red Hat Enterprise Linux 9</td>
+                            <td class="px-4 py-3 text-gray-400">RHEL · <span class="text-red-400 font-semibold">BYOL</span></td>
+                            <td class="px-4 py-3 text-center font-mono">91.3%</td>
+                            <td class="px-4 py-3 text-center font-mono">92.4%</td>
+                            <td class="px-4 py-3 text-center font-mono accent">95.6%</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-semibold text-white">Red Hat Enterprise Linux 10</td>
+                            <td class="px-4 py-3 text-gray-400">RHEL · <span class="text-red-400 font-semibold">BYOL</span></td>
+                            <td class="px-4 py-3 text-center font-mono">92.5%</td>
+                            <td class="px-4 py-3 text-center font-mono">98.1%</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="No tagged upstream RHEL 10 STIG content yet">soon</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-center text-xs text-gray-500 mt-4">Scores are the raw, unmodified SSG profile — controls genuinely N/A on a single-tenant cloud AMI (smartcard/CAC, bootloader password, remote-log offload) are documented in the image's POA&amp;M, not hidden. Need Ubuntu 26.04? The <a href="https://stigready.com" class="text-red-400 hover:underline">StigReady base</a> ships today; StigApplied 26.04 profiles land as the lockdown content is published upstream.</p>
+            <p class="text-center text-xs text-gray-500 mt-4"><span class="text-red-400 font-semibold">BYOL</span> = genuine Red Hat Enterprise Linux, built on the real RHEL DVD — bring your own Red Hat subscription (the image ships carrying none of ours). Rocky Linux 9 &amp; AlmaLinux 9 are binary-compatible RHEL rebuilds that need no subscription. RHEL 10 DISA STIG lands once ansible-lockdown tags its RHEL 10 STIG content.</p>
+            <p class="text-center text-xs text-gray-500 mt-2">Scores are the raw, unmodified SSG profile — controls genuinely N/A on a single-tenant cloud AMI (smartcard/CAC, bootloader password, remote-log offload) are documented in the image's POA&amp;M, not hidden. Need Ubuntu 26.04? The <a href="https://stigready.com" class="text-red-400 hover:underline">StigReady base</a> ships today; StigApplied 26.04 profiles land as the lockdown content is published upstream.</p>
         </div>
     </section>
 
@@ -158,7 +175,7 @@
             <p class="text-center text-gray-400 mb-12">Pick the profile your auditor requires — the remediation is already in the image, on Ubuntu 24.04 and the RHEL family alike.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div class="bg-gray-900 rounded-lg p-6 border-t-4 border-red-600">
-                    <h3 class="font-bold text-lg mb-3 text-white">CIS Level 1<br/><span class="text-sm text-gray-400 font-normal">Ubuntu 24.04 · Rocky 9 · Alma 9</span></h3>
+                    <h3 class="font-bold text-lg mb-3 text-white">CIS Level 1<br/><span class="text-sm text-gray-400 font-normal">Ubuntu 24.04 · RHEL 9/10 · Rocky 9 · Alma 9</span></h3>
                     <ul class="text-sm text-gray-300 space-y-2">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Baseline server hardening</li>
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Low operational friction</li>
@@ -166,7 +183,7 @@
                     </ul>
                 </div>
                 <div class="bg-gray-900 rounded-lg p-6 border-t-4 border-red-600">
-                    <h3 class="font-bold text-lg mb-3 text-white">CIS Level 2<br/><span class="text-sm text-gray-400 font-normal">Ubuntu 24.04 · Rocky 9 · Alma 9</span></h3>
+                    <h3 class="font-bold text-lg mb-3 text-white">CIS Level 2<br/><span class="text-sm text-gray-400 font-normal">Ubuntu 24.04 · RHEL 9/10 · Rocky 9 · Alma 9</span></h3>
                     <ul class="text-sm text-gray-300 space-y-2">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Everything in Level 1, plus</li>
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>Defense-in-depth restrictions</li>
@@ -194,7 +211,7 @@
                 <div class="text-center">
                     <div class="bg-red-600 text-white w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center font-bold text-xl">1</div>
                     <h3 class="text-lg font-bold mb-2">Pick OS + Profile</h3>
-                    <p class="text-gray-400 text-sm">Choose Ubuntu 24.04, Rocky 9, or Alma 9 at CIS L1, CIS L2, or DISA STIG — the remediation is already applied and scored.</p>
+                    <p class="text-gray-400 text-sm">Choose Ubuntu 24.04, genuine RHEL 9/10, Rocky 9, or Alma 9 at CIS L1, CIS L2, or DISA STIG — the remediation is already applied and scored.</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-red-600 text-white w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center font-bold text-xl">2</div>
@@ -214,7 +231,7 @@
     <section class="py-20 px-4">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-4 text-white">Availability</h2>
-            <p class="text-center text-gray-400 mb-10">Nine remediated images — three profiles across three operating systems — published on a monthly cadence, each boot-tested on real EC2 before release.</p>
+            <p class="text-center text-gray-400 mb-10">Remediated images across five operating systems and three CIS/STIG profiles, each scored against its raw SSG benchmark and boot-tested on real EC2 before release, on a monthly cadence.</p>
             <div class="space-y-4">
                 <div class="bg-gray-800 rounded-lg border border-red-800 p-6 flex items-center justify-between gap-4">
                     <div class="flex items-center gap-4">
@@ -222,6 +239,16 @@
                         <div>
                             <h3 class="font-bold text-white">Available direct today · landing on AWS Marketplace</h3>
                             <p class="text-sm text-gray-400">CIS L1/L2 &amp; DISA STIG (FIPS) · Ubuntu 24.04 · Rocky 9 · AlmaLinux 9</p>
+                        </div>
+                    </div>
+                    <a href="mailto:contact@stigapplied.com" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold transition whitespace-nowrap">Contact us</a>
+                </div>
+                <div class="bg-gray-800 rounded-lg border border-gray-700 p-6 flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-navy-light p-3 rounded-lg"><i data-lucide="badge-check" class="w-6 h-6 text-red-500"></i></div>
+                        <div>
+                            <h3 class="font-bold text-white">New — genuine Red Hat Enterprise Linux <span class="accent">(BYOL)</span></h3>
+                            <p class="text-sm text-gray-400">Built on the real RHEL DVD: CIS L1/L2 on RHEL 9 &amp; 10, DISA STIG on RHEL 9 — bring your own Red Hat subscription. RHEL 10 STIG next.</p>
                         </div>
                     </div>
                     <a href="mailto:contact@stigapplied.com" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold transition whitespace-nowrap">Contact us</a>
@@ -268,7 +295,7 @@
                     <a href="mailto:contact@stigapplied.com" class="hover:text-white transition">contact@stigapplied.com</a>
                 </div>
             </div>
-            <p class="text-center text-xs text-gray-600">&copy; 2026 StigApplied. All rights reserved. · Ubuntu 24.04 · Rocky Linux 9 · AlmaLinux 9</p>
+            <p class="text-center text-xs text-gray-600">&copy; 2026 StigApplied. All rights reserved. · Ubuntu 24.04 · Red Hat Enterprise Linux 9 &amp; 10 (BYOL) · Rocky Linux 9 · AlmaLinux 9</p>
         </div>
     </footer>
 
