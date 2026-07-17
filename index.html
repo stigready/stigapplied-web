@@ -12,10 +12,10 @@
 
       gtag('config', 'G-R2J9HMP1XX');
     </script>
-    <meta name="description" content="Fully hardened AWS AMIs with CIS Level 1/2 and DISA STIG remediation applied via ansible-lockdown — across Ubuntu 24.04 and the RHEL family: genuine Red Hat Enterprise Linux 8 &amp; 9 (BYOL) plus Rocky Linux 8/9/10 and AlmaLinux 9/10. Every image is scored against its raw SSG profile and gated at 90%; STIG images are FIPS 140-3 active. Built on the StigReady minimal base. Launching soon on AWS Marketplace — early access available.">
+    <meta name="description" content="Fully hardened AWS AMIs built to the CIS Benchmark Level 1/2 and DISA STIG baselines via the open-source ansible-lockdown roles — across Ubuntu 24.04 and the RHEL family: genuine Red Hat Enterprise Linux 8 &amp; 9 (BYOL) plus Rocky Linux 8/9/10 and AlmaLinux 9/10. Every image is scored against its raw SSG profile and gated at 90%; STIG images boot in FIPS mode with FIPS 140-3 validated crypto modules. Built on the StigReady minimal base. Launching soon on AWS Marketplace — early access available.">
     <meta name="keywords" content="STIG applied AMI, CIS hardened AMI, DISA STIG, ansible-lockdown, CIS Level 2, FIPS 140-3, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 9, RHEL BYOL, Ubuntu 24.04, Rocky Linux 8, Rocky Linux 9, Rocky Linux 10, AlmaLinux 9, AlmaLinux 10, OpenSCAP score, FedRAMP, DoD, auditd, AIDE">
     <meta name="author" content="StigApplied">
-    <title>StigApplied — CIS &amp; DISA STIG Remediated AMIs, Scored &amp; Gated</title>
+    <title>StigApplied — AMIs Hardened to CIS Benchmark &amp; DISA STIG Baselines, Scored &amp; Gated</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -61,8 +61,8 @@
                 <span class="accent">Remediated &amp; Scored</span>
             </h1>
             <p class="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
-                The StigReady minimal base with full <strong>CIS Level 1/2</strong> and
-                <strong>DISA STIG</strong> remediation applied via ansible-lockdown — across
+                The StigReady minimal base hardened to the <strong>CIS Benchmark Level 1/2</strong> and
+                <strong>DISA STIG</strong> baselines via the open-source ansible-lockdown roles — across
                 <strong class="text-white">Ubuntu 24.04</strong> and the
                 <strong class="text-white">RHEL family</strong>: genuine
                 <strong class="text-white">Red Hat Enterprise Linux 8 &amp; 9</strong> (BYOL),
@@ -71,7 +71,7 @@
             <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
                 Every image is <strong class="text-gray-200">scored in the build</strong> against its
                 <em>unmodified</em> SSG profile and gated at a 90% floor — with an auditor-grade
-                evidence bundle. STIG images are <strong class="accent">FIPS 140-3 active</strong>, and
+                evidence bundle. STIG images boot in <strong class="accent">FIPS mode with FIPS 140-3 validated crypto modules</strong>, and
                 every one still boots, takes your EC2 key pair, and registers with SSM out of the box.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
@@ -96,7 +96,7 @@
                 <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
                     <i data-lucide="shield-check" class="w-10 h-10 mb-4 text-red-500"></i>
                     <h3 class="text-lg font-bold mb-2">Remediation Applied</h3>
-                    <p class="text-gray-400 text-sm">Full CIS Level 1/2 or DISA STIG remediation applied with the upstream <code class="text-red-400">ansible-lockdown</code> roles — not a checklist, the actual fixes.</p>
+                    <p class="text-gray-400 text-sm">Hardened to the CIS Benchmark Level 1/2 or DISA STIG baselines with the upstream open-source <code class="text-red-400">ansible-lockdown</code> roles — not a checklist, the actual fixes.</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
                     <i data-lucide="gauge" class="w-10 h-10 mb-4 text-red-500"></i>
@@ -106,7 +106,7 @@
                 <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
                     <i data-lucide="lock" class="w-10 h-10 mb-4 text-red-500"></i>
                     <h3 class="text-lg font-bold mb-2">FIPS 140-3 &amp; Audit</h3>
-                    <p class="text-gray-400 text-sm">STIG images run FIPS 140-3 validated crypto, verified at build time. auditd runs the benchmark rule set and AIDE watches file integrity — ready for your SIEM.</p>
+                    <p class="text-gray-400 text-sm">STIG images boot in FIPS mode using the OS vendor's FIPS 140-3 <em>validated cryptographic modules</em>, verified at build time. auditd runs the benchmark rule set and AIDE watches file integrity — ready for your SIEM.</p>
                 </div>
                 <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-red-600 transition">
                     <i data-lucide="cloud-cog" class="w-10 h-10 mb-4 text-red-500"></i>
@@ -121,7 +121,7 @@
     <section id="catalog" class="py-20 px-4 bg-gray-800">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-4 text-white">Catalog &amp; Compliance Scores</h2>
-            <p class="text-center text-gray-400 mb-10">Each score is measured in the build against the image's <strong class="text-gray-300">unmodified</strong> SSG benchmark profile (CIS or DISA-STIG). Publish floor: 90%.</p>
+            <p class="text-center text-gray-400 mb-10">Each score is measured in the build against the image's <strong class="text-gray-300">unmodified</strong> SSG benchmark profile (CIS or DISA-STIG). Publish floor: 90%. <span class="text-gray-500">Scores as of the July 2026 builds; regenerated with every monthly build.</span></p>
             <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 overflow-x-auto">
                 <table class="w-full text-sm min-w-[560px]">
                     <thead class="bg-navy text-gray-300 uppercase text-xs tracking-wider">
@@ -200,7 +200,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="text-center text-xs text-gray-500 mt-4"><span class="text-red-400 font-semibold">BYOL</span> = genuine Red Hat Enterprise Linux, built on the real RHEL DVD — bring your own Red Hat subscription (the image ships carrying none of ours). Rocky Linux and AlmaLinux are binary-compatible RHEL rebuilds that need no subscription. RHEL 10 is on hold until upstream vulnerability-scanner coverage lands — we don't publish an image we can't scan. AlmaLinux 10 CIS L2 waits on a corrected upstream SCAP datastream, and RHEL-10-family DISA STIG lands once ansible-lockdown tags its RHEL 10 STIG content.</p>
+            <p class="text-center text-xs text-gray-500 mt-4"><span class="text-red-400 font-semibold">BYOL</span> = bring your own Red Hat subscription. StigApplied does not provide or resell commercial licenses for Red Hat products. Rocky Linux and AlmaLinux are binary-compatible RHEL rebuilds that need no subscription. RHEL 10 is on hold until upstream vulnerability-scanner coverage lands — we don't publish an image we can't scan. AlmaLinux 10 CIS L2 waits on a corrected upstream SCAP datastream, and RHEL-10-family DISA STIG lands once ansible-lockdown tags its RHEL 10 STIG content.</p>
             <p class="text-center text-xs text-gray-500 mt-2">Scores are the raw, unmodified SSG profile — controls genuinely N/A on a single-tenant cloud AMI (smartcard/CAC, bootloader password, remote-log offload) are documented in the image's POA&amp;M, not hidden. Need Ubuntu 26.04? The <a href="https://stigready.com" class="text-red-400 hover:underline">StigReady base</a> is coming soon to AWS Marketplace; StigApplied 26.04 profiles land as the lockdown content is published upstream.</p>
         </div>
     </section>
@@ -232,7 +232,7 @@
                     <ul class="text-sm text-gray-300 space-y-2">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>All severities remediated</li>
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>DoD SRG / NIST 800-53 aligned</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>FIPS active · exceptions documented</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0"></i>FIPS mode · exceptions documented</li>
                     </ul>
                 </div>
             </div>
@@ -285,7 +285,7 @@
                         <div class="bg-navy-light p-3 rounded-lg"><i data-lucide="badge-check" class="w-6 h-6 text-red-500"></i></div>
                         <div>
                             <h3 class="font-bold text-white">New — genuine Red Hat Enterprise Linux <span class="accent">(BYOL)</span></h3>
-                            <p class="text-sm text-gray-400">Built on the real RHEL DVD: CIS L1/L2 on RHEL 8 &amp; 9, DISA STIG on RHEL 9 — bring your own Red Hat subscription. RHEL 10 follows once upstream scanner coverage lands.</p>
+                            <p class="text-sm text-gray-400">CIS L1/L2 on RHEL 8 &amp; 9, DISA STIG on RHEL 9 — bring your own Red Hat subscription. RHEL 10 follows once upstream scanner coverage lands.</p>
                         </div>
                     </div>
                     <a href="mailto:contact@stigapplied.com" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold transition whitespace-nowrap">Contact us</a>
@@ -334,6 +334,7 @@
                 </div>
             </div>
             <p class="text-center text-xs text-gray-600">&copy; 2026 StigApplied. All rights reserved. · Ubuntu 24.04 · Red Hat Enterprise Linux 8 &amp; 9 (BYOL) · Rocky Linux 8/9/10 · AlmaLinux 9/10</p>
+            <p class="text-center text-xs text-gray-600 mt-3 max-w-3xl mx-auto">StigApplied is not affiliated with, certified by, or endorsed by DISA, the U.S. Department of Defense, NIST, the Center for Internet Security, Red Hat, Canonical, or Amazon Web Services. CIS® and CIS Benchmarks™ are property of the Center for Internet Security, Inc. Red Hat, Inc. holds the trademarks for Red Hat® Enterprise Linux® and associated branding; StigApplied does not provide commercial licenses for Red Hat products. Ubuntu® is a trademark of Canonical Ltd. FIPS 140-3 validation applies to cryptographic modules, not to any AMI as a whole.</p>
         </div>
     </footer>
 
