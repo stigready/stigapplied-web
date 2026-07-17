@@ -12,8 +12,8 @@
 
       gtag('config', 'G-R2J9HMP1XX');
     </script>
-    <meta name="description" content="Fully hardened AWS AMIs with CIS Level 1/2 and DISA STIG remediation applied via ansible-lockdown — across Ubuntu 24.04 and the RHEL family: genuine Red Hat Enterprise Linux 9 &amp; 10 (BYOL) plus Rocky Linux 9 and AlmaLinux 9. Every image is scored against its raw SSG profile and gated at 90%; STIG images are FIPS 140-3 active. Built on the StigReady minimal base.">
-    <meta name="keywords" content="STIG applied AMI, CIS hardened AMI, DISA STIG, ansible-lockdown, CIS Level 2, FIPS 140-3, Red Hat Enterprise Linux 9, RHEL 10, RHEL BYOL, Ubuntu 24.04, Rocky Linux 9, AlmaLinux 9, OpenSCAP score, FedRAMP, DoD, auditd, AIDE">
+    <meta name="description" content="Fully hardened AWS AMIs with CIS Level 1/2 and DISA STIG remediation applied via ansible-lockdown — across Ubuntu 24.04 and the RHEL family: genuine Red Hat Enterprise Linux 8 &amp; 9 (BYOL) plus Rocky Linux 8/9/10 and AlmaLinux 9/10. Every image is scored against its raw SSG profile and gated at 90%; STIG images are FIPS 140-3 active. Built on the StigReady minimal base.">
+    <meta name="keywords" content="STIG applied AMI, CIS hardened AMI, DISA STIG, ansible-lockdown, CIS Level 2, FIPS 140-3, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 9, RHEL BYOL, Ubuntu 24.04, Rocky Linux 8, Rocky Linux 9, Rocky Linux 10, AlmaLinux 9, AlmaLinux 10, OpenSCAP score, FedRAMP, DoD, auditd, AIDE">
     <meta name="author" content="StigApplied">
     <title>StigApplied — CIS &amp; DISA STIG Remediated AMIs, Scored &amp; Gated</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -65,8 +65,8 @@
                 <strong>DISA STIG</strong> remediation applied via ansible-lockdown — across
                 <strong class="text-white">Ubuntu 24.04</strong> and the
                 <strong class="text-white">RHEL family</strong>: genuine
-                <strong class="text-white">Red Hat Enterprise Linux 9 &amp; 10</strong> (BYOL),
-                plus Rocky Linux 9 and AlmaLinux 9.
+                <strong class="text-white">Red Hat Enterprise Linux 8 &amp; 9</strong> (BYOL),
+                plus Rocky Linux 8/9/10 and AlmaLinux 9/10.
             </p>
             <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
                 Every image is <strong class="text-gray-200">scored in the build</strong> against its
@@ -142,6 +142,13 @@
                             <td class="px-4 py-3 text-center font-mono accent">93.9%</td>
                         </tr>
                         <tr>
+                            <td class="px-4 py-3 font-semibold text-white">Rocky Linux 8</td>
+                            <td class="px-4 py-3 text-gray-400">RHEL</td>
+                            <td class="px-4 py-3 text-center font-mono">98.1%</td>
+                            <td class="px-4 py-3 text-center font-mono">97.6%</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="In validation">soon</td>
+                        </tr>
+                        <tr>
                             <td class="px-4 py-3 font-semibold text-white">Rocky Linux 9</td>
                             <td class="px-4 py-3 text-gray-400">RHEL</td>
                             <td class="px-4 py-3 text-center font-mono">91.3%</td>
@@ -149,11 +156,32 @@
                             <td class="px-4 py-3 text-center font-mono accent">95.3%</td>
                         </tr>
                         <tr>
+                            <td class="px-4 py-3 font-semibold text-white">Rocky Linux 10</td>
+                            <td class="px-4 py-3 text-gray-400">RHEL</td>
+                            <td class="px-4 py-3 text-center font-mono">92.2%</td>
+                            <td class="px-4 py-3 text-center font-mono">97.9%</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="No tagged upstream RHEL 10 STIG content yet">soon</td>
+                        </tr>
+                        <tr>
                             <td class="px-4 py-3 font-semibold text-white">AlmaLinux 9</td>
                             <td class="px-4 py-3 text-gray-400">RHEL</td>
                             <td class="px-4 py-3 text-center font-mono">93.1%</td>
                             <td class="px-4 py-3 text-center font-mono">93.7%</td>
                             <td class="px-4 py-3 text-center font-mono accent">93.8%</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-semibold text-white">AlmaLinux 10</td>
+                            <td class="px-4 py-3 text-gray-400">RHEL</td>
+                            <td class="px-4 py-3 text-center font-mono">97.4%</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="AlmaLinux currently ships a draft SCAP datastream for 10 that mis-scores controls the image already meets; deferred until corrected upstream">soon</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="No tagged upstream RHEL 10 STIG content yet">soon</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-semibold text-white">Red Hat Enterprise Linux 8</td>
+                            <td class="px-4 py-3 text-gray-400">RHEL · <span class="text-red-400 font-semibold">BYOL</span></td>
+                            <td class="px-4 py-3 text-center font-mono">98.1%</td>
+                            <td class="px-4 py-3 text-center font-mono">97.6%</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="In validation">soon</td>
                         </tr>
                         <tr>
                             <td class="px-4 py-3 font-semibold text-white">Red Hat Enterprise Linux 9</td>
@@ -165,14 +193,14 @@
                         <tr>
                             <td class="px-4 py-3 font-semibold text-white">Red Hat Enterprise Linux 10</td>
                             <td class="px-4 py-3 text-gray-400">RHEL · <span class="text-red-400 font-semibold">BYOL</span></td>
-                            <td class="px-4 py-3 text-center font-mono">92.5%</td>
-                            <td class="px-4 py-3 text-center font-mono">98.1%</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="Awaiting upstream vulnerability-scanner coverage for RHEL 10">soon</td>
+                            <td class="px-4 py-3 text-center font-mono text-gray-500" title="Awaiting upstream vulnerability-scanner coverage for RHEL 10">soon</td>
                             <td class="px-4 py-3 text-center font-mono text-gray-500" title="No tagged upstream RHEL 10 STIG content yet">soon</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-center text-xs text-gray-500 mt-4"><span class="text-red-400 font-semibold">BYOL</span> = genuine Red Hat Enterprise Linux, built on the real RHEL DVD — bring your own Red Hat subscription (the image ships carrying none of ours). Rocky Linux 9 &amp; AlmaLinux 9 are binary-compatible RHEL rebuilds that need no subscription. RHEL 10 DISA STIG lands once ansible-lockdown tags its RHEL 10 STIG content.</p>
+            <p class="text-center text-xs text-gray-500 mt-4"><span class="text-red-400 font-semibold">BYOL</span> = genuine Red Hat Enterprise Linux, built on the real RHEL DVD — bring your own Red Hat subscription (the image ships carrying none of ours). Rocky Linux and AlmaLinux are binary-compatible RHEL rebuilds that need no subscription. RHEL 10 is on hold until upstream vulnerability-scanner coverage lands — we don't publish an image we can't scan. AlmaLinux 10 CIS L2 waits on a corrected upstream SCAP datastream, and RHEL-10-family DISA STIG lands once ansible-lockdown tags its RHEL 10 STIG content.</p>
             <p class="text-center text-xs text-gray-500 mt-2">Scores are the raw, unmodified SSG profile — controls genuinely N/A on a single-tenant cloud AMI (smartcard/CAC, bootloader password, remote-log offload) are documented in the image's POA&amp;M, not hidden. Need Ubuntu 26.04? The <a href="https://stigready.com" class="text-red-400 hover:underline">StigReady base</a> ships today; StigApplied 26.04 profiles land as the lockdown content is published upstream.</p>
         </div>
     </section>
