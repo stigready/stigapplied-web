@@ -306,16 +306,58 @@
 
     <!-- Pricing -->
     <section id="pricing" class="py-20 px-4 bg-gray-800">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4 text-white">Pricing</h2>
-            <p class="text-gray-400 mb-10">Planned Marketplace pricing — pay only the software fee on top of your normal EC2 costs.</p>
-            <div class="bg-gray-900 rounded-xl border border-red-600 p-8 mb-6">
-                <p class="text-5xl font-black text-white mb-2">$0.08<span class="text-xl font-normal text-gray-400">/hr</span></p>
-                <p class="text-gray-300 mb-1">or <strong class="text-white">$649/yr</strong> per instance <span class="text-gray-500">(~7% savings)</span></p>
-                <p class="text-gray-400">Software fee at launch · EC2 instance costs billed separately by AWS</p>
-                <p class="text-sm text-gray-400 mt-6 pt-6 border-t border-gray-800">Leader-grade evidence in every image: an OpenSCAP score against the <em>unmodified</em> SSG profile, a POA&amp;M, and an SBOM — priced alongside images that ship none of it.</p>
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-white">Pricing</h2>
+            <p class="text-gray-400 text-center mb-10">Planned Marketplace pricing — software fee only, on top of your normal EC2 costs.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Standard: CIS L1 -->
+                <div class="bg-gray-900 rounded-xl border border-gray-700 p-8 flex flex-col">
+                    <div class="mb-6">
+                        <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Standard</p>
+                        <p class="text-4xl font-black text-white mb-1">$0.06<span class="text-lg font-normal text-gray-400">/hr</span></p>
+                        <p class="text-gray-300 text-sm">or <strong class="text-white">$449/yr</strong> per instance <span class="text-gray-500">(~15% savings)</span></p>
+                    </div>
+                    <p class="text-sm font-semibold text-white mb-3">CIS Benchmark Level 1</p>
+                    <ul class="text-sm text-gray-400 space-y-2 flex-grow mb-6">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>Baseline server hardening</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>Low operational friction</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>OpenSCAP score · POA&amp;M · SBOM</li>
+                    </ul>
+                    <a href="mailto:contact@stigapplied.com" class="block text-center bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded text-sm font-semibold transition">Request early access</a>
+                </div>
+                <!-- Advanced: CIS L2 -->
+                <div class="bg-gray-900 rounded-xl border border-red-600 p-8 flex flex-col">
+                    <div class="mb-6">
+                        <p class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-2">Advanced</p>
+                        <p class="text-4xl font-black text-white mb-1">$0.10<span class="text-lg font-normal text-gray-400">/hr</span></p>
+                        <p class="text-gray-300 text-sm">or <strong class="text-white">$749/yr</strong> per instance <span class="text-gray-500">(~15% savings)</span></p>
+                    </div>
+                    <p class="text-sm font-semibold text-white mb-3">CIS Benchmark Level 2</p>
+                    <ul class="text-sm text-gray-400 space-y-2 flex-grow mb-6">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>Everything in Level 1, plus</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>Defense-in-depth restrictions</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>auditd + AIDE · FedRAMP-ready</li>
+                    </ul>
+                    <a href="mailto:contact@stigapplied.com" class="block text-center bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded text-sm font-semibold transition">Request early access</a>
+                </div>
+                <!-- Federal: DISA STIG + FIPS -->
+                <div class="bg-gray-900 rounded-xl border border-gray-700 p-8 flex flex-col">
+                    <div class="mb-6">
+                        <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Federal</p>
+                        <p class="text-4xl font-black text-white mb-1">$0.15<span class="text-lg font-normal text-gray-400">/hr</span></p>
+                        <p class="text-gray-300 text-sm">or <strong class="text-white">$1,099/yr</strong> per instance <span class="text-gray-500">(~16% savings)</span></p>
+                    </div>
+                    <p class="text-sm font-semibold text-white mb-3">DISA STIG + FIPS 140-3</p>
+                    <ul class="text-sm text-gray-400 space-y-2 flex-grow mb-6">
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>All CAT I/II/III remediations</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>Boots in FIPS mode</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i>DoD / CMMC-ready</li>
+                    </ul>
+                    <a href="mailto:contact@stigapplied.com" class="block text-center bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded text-sm font-semibold transition">Request early access</a>
+                </div>
             </div>
-            <p class="text-sm text-gray-500">Annual contracts and Private Offers planned. <a href="mailto:contact@stigapplied.com" class="text-red-500 hover:underline">Contact us</a> for early access or volume pricing.</p>
+            <p class="text-center text-sm text-gray-500">All tiers include OpenSCAP score, POA&amp;M, and SBOM. EC2 instance costs billed separately by AWS.<br/>
+            Volume discounts (10+ instances) and annual Private Offers available. RHEL BYOL images priced at a premium. <a href="mailto:contact@stigapplied.com" class="text-red-500 hover:underline">Contact us</a> for enterprise pricing.</p>
         </div>
     </section>
 
